@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { Plus, Pencil, X } from 'lucide-react'
+import { Plus, Pencil, Trash2, X } from 'lucide-react'
 import api from '../api'
 import { useAuth } from '../context/AuthContext'
 import { Loading, Notice, Pagination, SearchBox, Modal } from '../components/UI'
@@ -78,7 +78,7 @@ export default function Orders() {
         {orders.map(o => {
           const canEdit = ['pending', 'preparing'].includes(o.status)
           const statuses = (nextStatus[o.status] || []).filter(s => s !== 'cancelled' || isAdmin)
-          return <tr key={o.id}><td className="order-number">#{String(o.id).padStart(4, '0')}<small className="table-sub">{new Date(o.created_at).toLocaleDateString()}</small></td><td><strong>{o.customer_name}</strong><small className="table-sub">Table {o.table_number || '—'}</small></td><td>{o.items?.map(i => `${i.quantity}× ${i.name}`).join(', ') || '—'}</td><td>{money(o.total)}</td><td><Status status={o.status}/></td><td><select className="status-select" value="" onChange={e => e.target.value && changeStatus(o, e.target.value)} disabled={!statuses.length}><option value="">{statuses.length ? 'Move to...' : 'Finished'}</option>{statuses.map(s => <option key={s} value={s}>{s}</option>)}</select></td><td><div className="actions">{canEdit && <button className="icon-btn" title="Edit order" onClick={() => openEdit(o)}><Pencil size={16}/></button>}{isAdmin && <button className="icon-btn danger" title="Delete order" onClick={() => remove(o)}><X size={16}/></button>}</div></td></tr>
+          return <tr key={o.id}><td className="order-number">#{String(o.id).padStart(4, '0')}<small className="table-sub">{new Date(o.created_at).toLocaleDateString()}</small></td><td><strong>{o.customer_name}</strong><small className="table-sub">Table {o.table_number || '—'}</small></td><td>{o.items?.map(i => `${i.quantity}× ${i.name}`).join(', ') || '—'}</td><td>{money(o.total)}</td><td><Status status={o.status}/></td><td><select className="status-select" value="" onChange={e => e.target.value && changeStatus(o, e.target.value)} disabled={!statuses.length}><option value="">{statuses.length ? 'Move to...' : 'Finished'}</option>{statuses.map(s => <option key={s} value={s}>{s}</option>)}</select></td><td><div className="actions">{canEdit && <button className="icon-btn" title="Edit order" onClick={() => openEdit(o)}><Pencil size={16}/></button>}{isAdmin && <button className="icon-btn danger" title="Delete order" aria-label={`Delete order ${o.id}`} onClick={() => remove(o)}><Trash2 size={16}/></button>}</div></td></tr>
         })}
       </tbody></table></div>{orders.length === 0 && <div className="empty">No orders match these filters.</div>}</div><Pagination meta={meta} onPage={setPage}/>
     </>}
