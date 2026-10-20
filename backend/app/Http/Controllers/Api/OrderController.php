@@ -33,7 +33,11 @@ class OrderController extends Controller {
         $data=$request->validated();
         DB::transaction(function() use ($data,$order) {
             $order->update(collect($data)->only(['customer_name','table_number','notes'])->all());
-            if (isset($data['items'])) { $order->items()->delete(); $this->syncItems($order,$data['items']); }
+            if (isset($data['items'])) {
+                $existingItemIds = $order->items()->pluck('menu_item_id')->all();
+                $order->items()->delete();
+                $this->syncItems($order,$data['items'],$existingItemIds);
+            }
         });
         return new OrderResource($order->fresh()->load(['user:id,name','items.menuItem']));
     }
@@ -43,16 +47,19 @@ class OrderController extends Controller {
     }
     public function updateStatus(Request $request, Order $order) {
         $data=$request->validate(['status'=>['required',Rule::in(['pending','preparing','ready','completed','cancelled'])]]);
+        if ($data['status'] === 'cancelled' && $request->user()->role !== 'admin') {
+            return response()->json(['message'=>'Only admin can cancel orders.'],403);
+        }
         $allowed=['pending'=>['preparing','cancelled'],'preparing'=>['ready','cancelled'],'ready'=>['completed'],'completed'=>[],'cancelled'=>[]];
         if (!in_array($data['status'],$allowed[$order->status]??[],true)) return response()->json(['message'=>"Cannot move order from {$order->status} to {$data['status']}."],422);
         $order->update(['status'=>$data['status']]);
         return new OrderResource($order->fresh()->load(['user:id,name','items.menuItem']));
     }
-    private function syncItems(Order $order, array $items): void {
+    private function syncItems(Order $order, array $items, array $existingItemIds = []): void {
         $total=0;
         foreach ($items as $line) {
             $menu=MenuItem::findOrFail($line['menu_item_id']);
-            if (!$menu->is_available) abort(422,'One or more menu items are currently unavailable.');
+            if (!$menu->is_available && !in_array($menu->id,$existingItemIds,true)) abort(422,'One or more menu items are currently unavailable.');
             $subtotal=(float)$menu->price*(int)$line['quantity'];
             $order->items()->create(['menu_item_id'=>$menu->id,'quantity'=>$line['quantity'],'unit_price'=>$menu->price,'subtotal'=>$subtotal]);
             $total+=$subtotal;
