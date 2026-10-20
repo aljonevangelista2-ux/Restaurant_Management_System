@@ -1,0 +1,96 @@
+[2026-10-21 00:04:35] production.ERROR: file_get_contents(D:\Restaurant_Management_System\backend\.env): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): file_get_contents(D:\\Restaurant_Management_System\\backend\\.env): Failed to open stream: No such file or directory at D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php:100)
+[stacktrace]
+#0 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(262): Illuminate/Foundation/Bootstrap/HandleExceptions->handleError(2, 'file_get_conten...', 'D://Restaurant_M...', 100)
+#1 [internal function]: Illuminate/Foundation/Bootstrap/HandleExceptions->{closure:Illuminate/Foundation/Bootstrap/HandleExceptions::forwardsTo():261}(2, 'file_get_conten...', 'D://Restaurant_M...', 100)
+#2 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(100): file_get_contents('D://Restaurant_M...')
+#3 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(82): Illuminate/Foundation/Console/KeyGenerateCommand->writeNewEnvironmentFileWith('base64:21lEfbGG...')
+#4 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(47): Illuminate/Foundation/Console/KeyGenerateCommand->setKeyInEnvironmentFile('base64:21lEfbGG...')
+#5 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Console/KeyGenerateCommand->handle()
+#6 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#7 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#8 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#9 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#10 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#11 D:/Restaurant_Management_System/backend/vendor/symfony/console/Command/Command.php(341): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#12 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#13 D:/Restaurant_Management_System/backend/vendor/symfony/console/Application.php(1125): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#14 D:/Restaurant_Management_System/backend/vendor/symfony/console/Application.php(357): Symfony/Component/Console/Application->doRunCommand(Object(Illuminate/Foundation/Console/KeyGenerateCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#15 D:/Restaurant_Management_System/backend/vendor/symfony/console/Application.php(196): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#16 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#17 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#18 D:/Restaurant_Management_System/backend/artisan(6): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#19 {main}
+"} 
+[2026-10-21 00:05:05] production.ERROR: file_get_contents(D:\Restaurant_Management_System\backend\.env): Failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): file_get_contents(D:\\Restaurant_Management_System\\backend\\.env): Failed to open stream: No such file or directory at D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php:100)
+[stacktrace]
+#0 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/HandleExceptions.php(262): Illuminate/Foundation/Bootstrap/HandleExceptions->handleError(2, 'file_get_conten...', 'D://Restaurant_M...', 100)
+#1 [internal function]: Illuminate/Foundation/Bootstrap/HandleExceptions->{closure:Illuminate/Foundation/Bootstrap/HandleExceptions::forwardsTo():261}(2, 'file_get_conten...', 'D://Restaurant_M...', 100)
+#2 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(100): file_get_contents('D://Restaurant_M...')
+#3 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(82): Illuminate/Foundation/Console/KeyGenerateCommand->writeNewEnvironmentFileWith('base64:/To8teKQ...')
+#4 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/KeyGenerateCommand.php(47): Illuminate/Foundation/Console/KeyGenerateCommand->setKeyInEnvironmentFile('base64:/To8teKQ...')
+#5 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate/Foundation/Console/KeyGenerateCommand->handle()
+#6 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate/Container/BoundMethod::{closure:Illuminate/Container/BoundMethod::call():35}()
+#7 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(96): Illuminate/Container/Util::unwrapIfClosure(Object(Closure))
+#8 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate/Container/BoundMethod::callBoundMethod(Object(Illuminate/Foundation/Application), Array, Object(Closure))
+#9 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Container/Container.php(799): Illuminate/Container/BoundMethod::call(Object(Illuminate/Foundation/Application), Array, Array, NULL)
+#10 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Console/Command.php(211): Illuminate/Container/Container->call(Array)
+#11 D:/Restaurant_Management_System/backend/vendor/symfony/console/Command/Command.php(341): Illuminate/Console/Command->execute(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#12 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Console/Command.php(180): Symfony/Component/Console/Command/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Illuminate/Console/OutputStyle))
+#13 D:/Restaurant_Management_System/backend/vendor/symfony/console/Application.php(1125): Illuminate/Console/Command->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#14 D:/Restaurant_Management_System/backend/vendor/symfony/console/Application.php(357): Symfony/Component/Console/Application->doRunCommand(Object(Illuminate/Foundation/Console/KeyGenerateCommand), Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#15 D:/Restaurant_Management_System/backend/vendor/symfony/console/Application.php(196): Symfony/Component/Console/Application->doRun(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#16 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(198): Symfony/Component/Console/Application->run(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#17 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#18 D:/Restaurant_Management_System/backend/artisan(6): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#19 {main}
+"} 
+[2026-10-20 16:07:34] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:222)
+[stacktrace]
+#0 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(138): Illuminate/Log/LogManager->resolve(NULL, NULL)
+#1 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(125): Illuminate/Log/LogManager->get(NULL)
+#2 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(703): Illuminate/Log/LogManager->driver()
+#3 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(402): Illuminate/Log/LogManager->error('syntax error, u...', Array)
+#4 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(365): Illuminate/Foundation/Exceptions/Handler->reportThrowable(Object(ParseError))
+#5 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(641): Illuminate/Foundation/Exceptions/Handler->report(Object(ParseError))
+#6 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(200): Illuminate/Foundation/Console/Kernel->reportException(Object(ParseError))
+#7 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#8 D:/Restaurant_Management_System/backend/artisan(6): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#9 {main}
+"} 
+[2026-10-20 16:07:34] laravel.ERROR: syntax error, unexpected token "\" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \"\\\" at D:/Restaurant_Management_System/backend/config/database.php:8)
+[stacktrace]
+#0 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(115): Illuminate/Foundation/Bootstrap/LoadConfiguration->{closure:Illuminate/Foundation/Bootstrap/LoadConfiguration::loadConfigurationFile():115}()
+#1 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(96): Illuminate/Foundation/Bootstrap/LoadConfiguration->loadConfigurationFile(Object(Illuminate/Config/Repository), 'database', 'D://Restaurant_M...', Array)
+#2 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(55): Illuminate/Foundation/Bootstrap/LoadConfiguration->loadConfigurationFiles(Object(Illuminate/Foundation/Application), Object(Illuminate/Config/Repository))
+#3 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/LoadConfiguration->bootstrap(Object(Illuminate/Foundation/Application))
+#4 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#5 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#6 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#7 D:/Restaurant_Management_System/backend/artisan(6): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#8 {main}
+"} 
+[2026-10-20 16:07:43] laravel.EMERGENCY: Unable to create configured logger. Using emergency logger. {"exception":"[object] (InvalidArgumentException(code: 0): Log [] is not defined. at D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Log/LogManager.php:222)
+[stacktrace]
+#0 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(138): Illuminate/Log/LogManager->resolve(NULL, NULL)
+#1 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(125): Illuminate/Log/LogManager->get(NULL)
+#2 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Log/LogManager.php(703): Illuminate/Log/LogManager->driver()
+#3 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(402): Illuminate/Log/LogManager->error('syntax error, u...', Array)
+#4 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Exceptions/Handler.php(365): Illuminate/Foundation/Exceptions/Handler->reportThrowable(Object(ParseError))
+#5 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(641): Illuminate/Foundation/Exceptions/Handler->report(Object(ParseError))
+#6 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(200): Illuminate/Foundation/Console/Kernel->reportException(Object(ParseError))
+#7 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#8 D:/Restaurant_Management_System/backend/artisan(6): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#9 {main}
+"} 
+[2026-10-20 16:07:43] laravel.ERROR: syntax error, unexpected token "\" {"exception":"[object] (ParseError(code: 0): syntax error, unexpected token \"\\\" at D:/Restaurant_Management_System/backend/config/database.php:8)
+[stacktrace]
+#0 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(115): Illuminate/Foundation/Bootstrap/LoadConfiguration->{closure:Illuminate/Foundation/Bootstrap/LoadConfiguration::loadConfigurationFile():115}()
+#1 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(96): Illuminate/Foundation/Bootstrap/LoadConfiguration->loadConfigurationFile(Object(Illuminate/Config/Repository), 'database', 'D://Restaurant_M...', Array)
+#2 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Bootstrap/LoadConfiguration.php(55): Illuminate/Foundation/Bootstrap/LoadConfiguration->loadConfigurationFiles(Object(Illuminate/Foundation/Application), Object(Illuminate/Config/Repository))
+#3 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(342): Illuminate/Foundation/Bootstrap/LoadConfiguration->bootstrap(Object(Illuminate/Foundation/Application))
+#4 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(494): Illuminate/Foundation/Application->bootstrapWith(Array)
+#5 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(196): Illuminate/Foundation/Console/Kernel->bootstrap()
+#6 D:/Restaurant_Management_System/backend/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1235): Illuminate/Foundation/Console/Kernel->handle(Object(Symfony/Component/Console/Input/ArgvInput), Object(Symfony/Component/Console/Output/ConsoleOutput))
+#7 D:/Restaurant_Management_System/backend/artisan(6): Illuminate/Foundation/Application->handleCommand(Object(Symfony/Component/Console/Input/ArgvInput))
+#8 {main}
+"} 
